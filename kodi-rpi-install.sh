@@ -89,4 +89,3 @@ echo ""
 echo "Run kodi with 'kodi-standalone' or 'kodi' command. Bye!"
 echo ""
 exit
-```
