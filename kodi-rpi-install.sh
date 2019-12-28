@@ -65,11 +65,10 @@ echo "Enter amount of memory for GPU (you can change that later in /boot/config.
 read -p ":" ARAM
 echo ""
 # GPU size and VP6, VP8, MJPEG, Theora codecs
-echo -e "#GPU RAM SIZE\ngpumem=${ARAM}\n# Do not turn TV during boot\nhdmiignorececinit=1\n# Enable VP6, VP8, MJPEG, Theora codecs\nstart_x=1" >> /boot/config.txt
+echo -e "#GPU RAM SIZE\ngpumem=${ARAM}\n# Do not turn TV during boot\nhdmi_ignore_cec_init=1\n# Enable VP6, VP8, MJPEG, Theora codecs\nstart_x=1" >> /boot/config.txt
 # install kodi
 echo "Please wait updating repositories, installing Kodi..."
-apt update; apt install
-#kodi kodi-vfs-libarchive -y
+apt update; apt install kodi -y #kodi-vfs-libarchive -y
 
 while [[ $CUKDI != "y" && $CUKDI != "n" ]]; do
 echo ""
