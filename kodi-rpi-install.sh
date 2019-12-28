@@ -25,11 +25,11 @@ while [[ $DAUT != "y" && $DAUT != "n" ]]; do
 read -p "Modify config.txt for you? [y/n]: " -e DAUT
 done
 if [[ $DAUT = "y" ]]; then
-echo -e "\n#Support for h264 50\/60fps video files\ndisableautoturbo=0" >> /boot/config.txt
+echo -e "\n#Support for h264 50/60fps video files\ndisable_auto_turbo=0" >> /boot/config.txt
 else
 echo "-----------------------------------------------------------------------------"
 echo ""
-echo ">>> In case of problems add 'disableautoturbo=0' to boot/config.txt <<< "
+echo ">>> In case of problems add 'disable_auto_turbo=0' to boot/config.txt <<< "
 fi
 # Amount of GPU memory
 echo ""
@@ -41,13 +41,13 @@ echo "--------------------------------------------------------------------------
 ;;
 2) # RPI 4
 echo ""
-echo -e "If you have 4K TV/monitor and want to watch movies in 60Hz instead 30Hz\nadd 'hdmienable4kp60=1' to /boot/config.txt"
+echo -e "If you have 4K TV/monitor and want to watch movies in 60Hz instead 30Hz\nadd 'hdmi_enable_4kp60=1' to /boot/config.txt"
 echo ""
 while [[ $EFORK != "y" && $EFORK != "n" ]]; do
-read -p "Add mentioned value to config.txt? [y/n]: " -e EFORK
+read -p "Add value for you to config.txt? [y/n]: " -e EFORK
 done
 if [[ $EFORK = "y" ]]; then
-echo -e "\n#Enables 4Kp60 for 4K monitor/TV\nhdmienable4kp60=1" >> /boot/config.txt
+echo -e "\n#Enables 4Kp60 for 4K monitor/TV\nhdmi_enable_4kp60=1" >> /boot/config.txt
 fi
 echo ""
 echo "-----------------------------------------------------------------------------"
